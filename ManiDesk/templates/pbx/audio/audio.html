@@ -1,0 +1,29 @@
+{% load static %}<!--carregar objetos estaticos dentro do diretório statico do projeto em Djaango-->
+
+<!DOCTYPE html>
+
+  <head>
+    <title>PBX</title>
+      <!-- Essa é a ref para passar o parametro da pasta correta no diretório estático  -->
+      <link rel="shortcut icon" type="image/x-icon" href="{% static 'icone/favicon.ico' %}"><!-- e -->
+      <link rel="stylesheet" href="{% static 'css/pbx/pbx_estilo.css' %}">
+      <link rel="stylesheet" href="{% static 'css/pbx/audio_estilo.css' %}">
+  </head>
+  {% include "geral/menu.html" %}
+  {% include "geral/abas.html" %}
+<br>
+<br>
+<br>
+  <body class="tela">
+  	<div class="coluna">
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+    <input type="file" name="file">
+    <button type="submit">Enviar</button>
+</form>
+	</div>
+
+
+
+  </body>
+
+</html>

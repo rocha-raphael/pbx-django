@@ -1,0 +1,79 @@
+/* Estilo CSS básico */
+.criar {}
+
+.criar form {
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.criar input[type="text"],
+.criar input[type="password"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.first-row,
+.second-row,
+.third-row {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.first-row input,
+.third-row input,
+.third-row select {
+  width: 49%;
+  margin-right: 2%;
+}
+
+.row-elements label {
+  font-weight: bold;
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+  text-align: left;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.row-elements input[type="checkbox"] {
+  margin-top: 20px;
+  align-self: flex-end;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.criar input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.criar input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+.criar row-elements {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33%;
+}
+

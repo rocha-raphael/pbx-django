@@ -1,0 +1,114 @@
+.ramais {}
+
+
+.ramais table {
+  width: 70%;
+  text-align: center;
+
+
+
+}
+.ramais tr th td {
+  display: inline-block;
+  position: relative;
+
+}
+
+.ramais input[type="text"],
+.ramais input[type="password"],
+select {
+  width: 100%;
+  padding: 10px;
+  border-left: 10px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: white;
+  line-height: 15px;
+  box-sizing: border-box;
+
+
+}
+
+.ramais p {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: white;
+  line-height: 15px;
+  }
+
+
+.btn-ex-edit button {
+  display: flex-center;
+  width: 100%;
+  align-text: center;
+  padding: 10px;
+  margin-left: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: white;
+  line-height: 15px;
+  box-sizing: border-box;
+
+}
+.btn-ex-edit button:hover {
+  background-color: #f0f0f0;
+}
+
+.btn-ex-edit.active {
+  display: flex;
+}
+
+
+
+.ramais h4 {
+    margin-top: 30px;
+}
+
+
+#id-ver {
+  width: 5%;
+  padding: 10px;
+  margin-top: 10px;
+}
+#ramal-ver {
+  width: 8%;
+  padding: 10px;
+  margin-top: 10px;
+}
+#nome-ver {
+  width: 15%;
+  padding: 10px;
+  margin-top: 10px;
+}
+#contexto-ver {
+  width: 15%;
+  padding: 10px;
+  margin-top: 10px;
+}
+#grupo-ver {
+  width: 10%;
+  padding: 10px;
+  margin-top: 10px;
+}
+#tronco-ver {
+  width: 14%;
+  padding: 10px;
+  margin-top: 10px;
+}
+#grava-ver {
+  width: 3%;
+  padding: 10px;
+  margin-top: 10px;
+}
+#ip-ver {
+  width: 16%;
+  padding: 10px;
+  margin-top: 10px;
+}

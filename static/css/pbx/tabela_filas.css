@@ -1,0 +1,48 @@
+table {
+  border-collapse: collapse;
+  width: 80%;
+}
+
+td {
+  border: none;
+  padding: 8px;
+  text-align: center;
+  width: 20px;
+}
+
+#ramal {
+  text-align: left;
+  width: 200px;
+}
+#nome {
+  text-align: center;
+  width: 200px;
+}
+#grupo {
+  text-align: left;
+  width: 200px;
+}
+#fila {
+  text-align: left;
+  width: 200px;
+}
+#tronco {
+  text-align: left;
+  width: 200px;
+}
+#grava {
+  text-align: left;
+  width: 200px;
+}
+#senha {
+  text-align: left;
+  width: 200px;
+}
+#ip {
+  text-align: left;
+  width: 200px;
+}
+#exclui {
+  text-align: left;
+  width: 200px;
+}

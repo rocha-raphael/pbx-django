@@ -1,0 +1,31 @@
+{% load static %} <!--carregar objetos estaticos dentro do diretório statico do projeto em Djaango-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <!-- Essa é a ref para passar o parametra da pasta correta no diretório estático -->
+    <link rel="stylesheet" href="{% static 'css/login/login_estilo.css' %}">
+
+</head>
+<body>
+ <div class="login-container">
+      <h1>Login</h1>
+     <!--action envia as funções do forms para a url com o nome igual ao que esta entre aspas "-->
+     <!-- {% csrf_token %}  serve para autenticar o login com segurança -->
+      <form action="{% url 'login'%}" method="POST">{% csrf_token %}
+        <div class="user-icon">
+          <i class="fas fa-user"></i>
+          <input type="text" placeholder="Usuário" name="usuario">
+        </div>
+        <div class="password-icon">
+          <i class="fas fa-lock"></i>
+          <input type="password" placeholder="Senha" name="senha">
+        </div>
+        <input type="submit" value="Login">
+      </form>
+    </div>
+
+</body>
+</html>

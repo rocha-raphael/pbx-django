@@ -1,0 +1,19 @@
+{% load static %}<!--carregar objetos estaticos dentro do diretório statico do projeto em Djaango-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Minha Página</title>
+	<link rel="stylesheet" href="{% static 'css/teste.css' %}">
+
+</head>
+<body>
+	<div class="coluna">
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+    <input type="file" name="file">
+    <button type="submit">Enviar</button>
+</form>
+	</div>
+</body>
+</html>

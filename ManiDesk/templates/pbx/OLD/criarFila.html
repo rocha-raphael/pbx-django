@@ -1,0 +1,61 @@
+<!--{% load static %}
+<!--<link rel="stylesheet" href="{% static 'css/pbx/criar_estilo.css' %}">
+<!--    <form action="{% url 'fila'%}" method="POST">{% csrf_token %}
+<!--        <select name="id">
+<!--    {% for id in lista_ids_fila %}
+<!--            <option value={{ id }}>{{ id }}</option>
+<!--
+<!--     {% endfor %}
+<!--        </select>
+<!--    </form>
+<!--        <div class="criar">
+<!--    <form action="{% url 'fila'%}" method="POST">{% csrf_token %}
+<!--
+<!--<div class="first-row">
+<!--  <div class="row-elements">
+<!--      <label>Fila:</label>
+<!--      <input type="text" name="nome_fila" placeholder="Fila" required>
+<!--  </div>
+<!--  <div class="row-elements">
+<!--      <label>Estrategia:</label>
+<!--            <select name="estrategia">
+<!--        <option value="ringall">Tocar Todos</option>
+<!--        <option value="leastrecent">Mais tempo sem tocar</option>
+<!--        <option value="fewestcalls">Menos ligações atendidas</option>
+<!--        <option value="random">Aleatório</option>
+<!--        <option value="rrmemory">Aleatorio lembra ultimo</option>
+<!--        <option value="linear">Linear</option>
+<!--        <option value="wrandom">Penalidade</option>
+<!--
+<!--      </select>
+<!--  </div>
+<!--</div>
+<!--<div class="second-row">
+<!--  <div class="row-elements">
+<!-- <br>
+<!--  </div>
+<!--  <div class="row-elements">
+<!--      <label>Toques:</label>
+<!--      <select name="toques">
+<!--
+<!--        <option value="1" {{ t1 }}>1</option>
+<!--        <option value="2" {{ t2 }}>2</option>
+<!--        <option value="3" {{ t3 }}>3</option>
+<!--        <option value="4" {{ t4 }}>4</option>
+<!--        <option value="5" {{ t5 }}>5</option>
+<!--        <option value="6" {{ t6 }}>6</option>
+<!--      </select>
+<!--  </div>
+<!--    </div>
+<!--  <div class="row-elements">
+<!--<div class="third-row">
+<!--      <input type="checkbox" id="announce" name="anuncio" value="yes">
+<!--      <label for="announce">Anuncio</label>
+<!--      <input type="submit" name="incluir_fila" value="Incluir">
+<!--    </div>
+<!--
+<!--</div>
+<!--    </form>
+<!--    </div>
+
+

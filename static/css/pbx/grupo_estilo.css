@@ -1,0 +1,160 @@
+
+
+
+.container_grupo {
+    display: grid;
+    width: 100%;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+	grid-gap: 10px;
+
+	border: none;
+  }
+
+.form-control {
+	height: 300px;
+	border: 1px solid black;
+	overflow: auto;
+	padding: 10px;
+    border: none;
+
+}
+
+.form-control input[type="text"], select {
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  font-size: 16px;
+  width: 200px;
+}
+
+.scroll-box-grupo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  overflow: auto;
+
+}
+
+.select_grupos {
+
+  width: 95%; /* tamanho do retangulo*/
+  height: 58%; /* tamanho do retangulo*/
+  overflow: auto;
+  margin-left: 1px;
+  background-color: white;
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 20px;
+  overflow-x: hidden;
+
+}
+
+    /*position: relative;*/
+
+.btn-grupo {
+  width: 120px;
+  height: 28px;
+  background-color: #eeeeee;
+  border: none;
+  border-radius: 10px;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: -50px -10px -20px -20px;
+  font-size: 12px;
+  cursor: pointer;
+  list-style-type: none;
+}
+
+
+
+.btn-grupo ul {
+    width: 120px;
+    height: 28px;
+    align-self: start;
+    list-style-type: none;
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    font-size: 18px;
+}
+
+.close-button {
+  float: right;
+  font-size: 12px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 10px;
+  margin-right: 20px;
+  border: none;
+  transform: translate(-50%, -50%);
+}
+
+.close-button:hover {
+  color: #000000;
+  cursor: pointer;
+}
+
+.btn-membro {
+  width: 50px;
+  height: 20px;
+  background-color: #eeeeee;
+  border: none;
+  border-radius: 10px;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  padding-top: 5px;
+  padding-bottom: 0px;
+  padding-left: 10px
+}
+
+
+#btn-add-grupo {
+    align-self: flex-start;
+    height: 20%;
+    width: 10%;
+
+}
+#grupo {
+    align-self: start;
+    height: 20%;
+    width: 20%;
+
+
+}
+
+#grupos {
+    display: flex;
+    height: 89%;
+    width: 200%;
+
+}
+
+#membro_control {
+    height: 300%;
+    width: 100%;
+
+}
+
+#del_ramal {
+  margin-top: 7px;
+  margin-right: 1px;
+
+
+}
+#btn-ramal {
+  width: 80px;
+
+
+}
+.body-grupo {
+    height 80%;
+    width: 90%;
+}

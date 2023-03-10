@@ -1,0 +1,84 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/pbx/popup_editar.css' %}">
+<!DOCTYPE html>
+<html>
+
+
+<!-- Conteúdo do pop-up -->
+
+<input type="checkbox"  class="modal-state" id="modal-1" />
+<div class="modal">
+  <label class="modal-background" for="modal-1"></label>
+  <div class="modal-content">
+    <label for="modal-1"></label>
+    <form action="{% url 'ramais' %}" method="post">{% csrf_token %}
+      <button type="submit" value="fechar_editar" name="fechar_editar">X</button>
+      </form>
+<form action="{% url 'ramais' %}" method="post">{% csrf_token %}
+
+<div class="first-row">
+  <div class="row-elements">
+      <h4>{{ editar_ramal.1 }} </h4>
+      <input readonly type="hidden" name="ramalAtualizar" value={{ editar_ramal.1 }} id="ramal">
+  </div>
+  <div class="row-elements">
+      <label>Nome:</label>
+      <br>
+      <input name="nomeAtualizar" type="text" maxlength="20" value="{{ editar_ramal.2 }}" id="nome" required>
+  </div>
+  <div class="row-elements">
+      <label>Senha:</label>
+      <input type="text" id="senha" name="senhaAtualizar"  minlength="6" value={{ editar_ramal.7 }}  required >
+
+</div>
+</div>
+<div class="second-row">
+  <div class="row-elements">
+            <label>Contexto:</label>
+      <select name="contextoAtualizar">
+        <option name="contextoAtualizar" value={{ editar_ramal.3 }} selected>{{ editar_ramal.3 }}</option>
+          {% for i in contextos %}
+              {% if i != editar_ramal.3 %}
+                    <option name="contextoAtualizar"  value={{ i }}>{{ i }}</option>
+                {% else %}
+                   {% endif %}
+          {% endfor %}
+      </select>
+  </div>
+
+  <div class="row-elements">
+
+      <label>Tronco:</label>
+
+      <select name="troncoAtualizar">
+            <option name="troncoAtualizar"  value={{ editar_ramal.5 }} >{{ editar_ramal.5 }}</option>
+            {% for tronco in lista_de_troncos %}
+                {% if tronco != linha.5  %}
+                    <option name="troncoAtualizar" value={{ tronco }}>{{ tronco }}</option>
+                {% endif %}
+            {% endfor %}
+          </select>
+
+  </div>
+    </div>
+  <div class="row-elements">
+<div class="third-row">
+          {% if editar_ramal.6 == "yes" %}
+                    <input type="checkbox" class="CheckGravar" id="gravayes" name="gravaAtualizar" value="yes" checked>
+                    <label for="gravayes">Gravar</label>
+           {% else %}
+                    <input type="checkbox" class="CheckGravar" id="gravano" name="gravaAtualizarno" value="no">
+                     <label for="gravano">Gravar</label>
+            {% endif %}
+       <input name="atualizacao" id="AtualizarEdicao" type="submit" value="Atualizar">
+    </div>
+
+</div>
+    </form>
+
+
+  </div>
+</div>
+
+</html>

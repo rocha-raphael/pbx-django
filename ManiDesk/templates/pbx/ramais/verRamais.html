@@ -1,0 +1,53 @@
+
+{% load static %}<!--carregar objetos estaticos dentro do diretório statico do projeto em Djaango-->
+
+<link rel="stylesheet" href="{% static 'css/pbx/ramais.css' %}">
+<div  class="ramais">
+
+    {% if popup_atualizar is not None %}
+            {% include "pbx/ramais/popup_editar.html" %}
+      {% else %}
+    {% endif %}
+
+<form action="{% url 'ramais' %}" method="post">{% csrf_token %}
+    <table>
+  <thead>
+    <tr>
+      <th id="id-ver">ID</th>
+      <th id="ramal-ver">Ramal</th>
+      <th id="nome-ver">Nome</th>
+      <th id="contexto-ver">Contexto</th>
+
+      <th id="tronco-ver">Tronco</th>
+      <th id="grava-ver">Grava</th>
+      <th id="ip-ver">IP</th>
+      <th id="editar-ver">  </th>
+      <th id="excluir-ver">  </th>
+
+    </tr>
+  </thead>
+  <tbody>
+      <tr> {% for linha in lista_de_ramais %}
+          <td><h4>{{ linha.0 }} </h4></td>
+          <td><input readonly type="text" value={{ linha.1 }}></td>
+          <td><input readonly type="text" value="{{ linha.2 }}"></td>
+          <td><input readonly type="text" value={{ linha.3 }}></td>
+          <td><input readonly type="text" value={{ linha.4 }}></td>
+
+          <td><input readonly type="text" value={{ linha.6 }}></td>
+          <td><input readonly type="text" value={{ linha.8 }}></td>
+          <td><div class="btn-ex-edit">
+            <input type="hidden"  value={{ linha.0 }}>
+            <button name="popup_atualizar" type="submit" value={{ linha.0 }}>Atualizar</button>
+          </div>
+          </td>
+          <td><div class="btn-ex-edit">
+            <button name=excluir_ramal  value={{ linha.0 }} type="submit">Excluir</button>
+          </div>
+
+      </tr>
+    {% endfor %}
+  </tbody>
+</table></form>
+
+</div>

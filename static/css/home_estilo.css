@@ -1,0 +1,65 @@
+.tela {
+    height: 100vh;
+    width: 100%
+}
+
+
+.containerHOME body {
+    /*position: relative;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: left; /* esquerda o container na tela */
+    height: 100vh; /* define a altura para ocupar toda a tela */
+    margin-left: 0px;
+    display: flex;
+    width: 100%
+    /* flex-direction: column; /* alinha os botões em coluna */
+
+  }
+
+  .containerHOME header{
+  display: flex;
+  margin-top: 20px;
+
+  }
+
+  .containerHOME nav {
+    justify-content:  flex-end;
+    padding-left: 10%
+    margin-left: 10%;
+
+
+  }
+
+  .containerHOME section {
+     padding-top; 20px;
+     align-text: left;
+     justify-content:  flex-end;
+
+  }
+
+.containerHOME main {
+    width: 75%;
+
+ }
+
+.containerHOME aside {
+    width: 30%;
+    text-align: left;
+    padding-top; 20px;
+    align-content; bottom;
+    justify-content:  flex-end;
+
+    position: absolute;
+    bottom: 10%;
+    left: 70%;
+    background-color: #f2f2f2;
+    padding: 10px;
+
+  }
+
+.containerHOME aside li {
+  list-style-type: none;
+
+  }

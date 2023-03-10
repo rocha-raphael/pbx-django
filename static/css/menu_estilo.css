@@ -1,0 +1,214 @@
+/*Estilo para o container geral */
+.tela {
+    height: 100vh;
+    width: 100%
+}
+
+.containerMenu {
+    /*position: relative;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: left; /* esquerda o container na tela */
+    height: 100vh; /* define a altura para ocupar toda a tela */
+    margin-left: 0px;
+    display: flex;
+    /* flex-direction: column; /* alinha os botões em coluna */
+    height: 100vh;
+    width: 100%
+
+  }
+
+.scrollable-element {
+  overflow: auto;
+  height: 90%; /* Altura desejada para a área rolável */
+}
+
+  /* Estilo para os botões */
+.round-button {
+    /*position: absolute; */
+    border: none; /* remove as bordas */
+    border-radius: 80%; /* arredonda as bordas */
+    width: 50px; /* define a largura */
+    height: 50px; /* define a altura */
+    margin: none; /* adiciona margem entre os botões */
+    /*background-color: #1c869a; /* define a cor de fundo */
+    box-shadow: inset 0 0 5px #FFFFFF;
+    transition: all 0.2s ease-in-out; /* adiciona uma transição suave para as alterações de estilo */
+    font-style: verdana;
+    font-weight: bold;
+    top: 50px;
+
+
+  }
+
+  /* Altera o estilo dos botões quando o mouse estiver sobre eles */
+.round-button:hover {
+   width: 50px; /* aumenta a largura */
+   height: 50px; /* aumenta a altura */
+   background-size: 100%;
+   background-color: none; /* muda a cor de fundo */
+   cursor: pointer; /* adiciona cursor de mãozinha */
+   transform: scale(1.8);
+
+   }
+
+
+
+.retangulo {
+  width: 150px;
+  height: 80px;
+  background-color: green;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.botao-pausa {
+  background-color: lightgray;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.contador {
+  font-size: 15px;
+  font-weight: none;
+  background-position: right bottom;
+}
+
+.icone {
+  background-image: url('../icone/iconepainel.ico');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  width: 50px;
+  height: 50px;
+}
+/*.blink {*/
+/* padding: 10px 20px;*/
+/* background-color: lightgray;*/
+/* border-radius: 5px;*/
+/* text-decoration: none;*/
+/* color: black;*/
+/* transition: background-color 0.5s ease;*/
+/**/
+
+/*blink:hover {*/
+/* background-color: gray;*/
+/**/
+
+/*blink:active {*/
+/* transform: translateY(2px);*/
+
+
+
+
+
+#menu {
+    position: absolute;
+    left: 0px;
+    margin: 0px;
+    top: 18%;
+    height: 450px;
+    width: 50px;
+    list-style: none;
+    padding: 20px;
+    background-color: #1c869a;
+/* background-color: #1c869a; */
+    box-shadow: inset 0 0 10px #FFFFFF;
+
+
+}
+
+#home {
+    background-image: url('../imagens/botao-de-inicio.png');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+}
+#home:hover {
+    background-size: 100%;
+    background-image: url('../imagens/home.png');
+    border-radius: 50%;
+}
+
+#painel {
+    background-image: url('../imagens/agente-de-atendimento-ao-cliente.png');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+}
+#painel:hover {
+    background-size: 100%;
+    background-image: url('../imagens/painelt.png');
+}
+#pbx {
+    background-image: url('../imagens/telefone-fixo.png');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+}
+#pbx:hover {
+    background-size: 100%;
+    background-image: url('../imagens/pbx.png');
+}
+#estatisticas {
+    background-image: url('../imagens/estatistica.png');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+}
+#estatisticas:hover {
+    background-size: 100%;
+    background-image: url('../imagens/relatorios.png');
+}
+#adm {
+    background-image: url('../imagens/configuracao.png');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+}
+#adm:hover {
+    background-size: 100%;
+    background-image: url('../imagens/adm.png');
+}
+#global {
+    background-image: url('../imagens/terra.png');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+}
+#global:hover {
+    background-size: 100%;
+    background-image: url('../imagens/global.png');
+}
+
+body {
+  overflow: auto;
+  height: 90%; /* Altura desejada para a área rolável */
+  box-shadow: inset 0 0 10px #FFFFFF;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  padding-left: 120px;
+  padding-right: 05%;
+  padding-bottom: 02%;
+  size: 100%;
+}
+
+/*
+header {
+    background-color: #02768d;
+    color: #fff;
+    text-align: center;
+    padding-left: 10%;
+  }
+*/
+
+
+

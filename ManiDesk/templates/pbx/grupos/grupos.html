@@ -1,0 +1,74 @@
+{% load static %}<!--carregar objetos estaticos dentro do diretório statico do projeto em Djaango-->
+
+<!DOCTYPE html>
+
+  <head>
+    <title>PBX</title>
+      <!-- Essa é a ref para passar o parametro da pasta correta no diretório estático  -->
+      <link rel="shortcut icon" type="image/x-icon" href="{% static 'icone/favicon.ico' %}"><!-- e -->
+      <link rel="stylesheet" href="{% static 'css/pbx/pbx_estilo.css' %}">
+      <link rel="stylesheet" href="{% static 'css/pbx/grupo_estilo.css' %}">
+  </head>
+
+  {% include "geral/menu.html" %}
+  {% include "geral/abas.html" %}
+
+  <body class="body-grupo">
+<form action="{% url 'grupos' %}" method="POST">{% csrf_token %}
+  <div class="container_grupo">
+      <div class="form-control" id="grupos">
+        <label for="grupo"><h3>Grupos:</h3></label>
+        <input type="text" id="grupo" name="grupo">
+          <br>
+            <button value="True" name="adicionar_grupo" id="btn-add-grupo">Adicionar</button>
+            <div class="select_grupos">
+              <div class="scroll-box-grupo">
+                <form class="grupos_nomes" action="{% url 'fila' %}" method="post"> {% csrf_token %}
+                    {% for i in lista_grupos %}
+                    <ul>
+                        <button class="btn-grupo" value="{{ i }}" name="btn_grupo">{{ i }}
+                            <span >
+                                <button name="del_btn_grupo" value="{{ i }}" class="close-button">X</button>
+                            </span>
+                        </button>
+                    </ul>
+                    {% endfor %}
+                </form>
+              </div>
+            </div>
+      </div>
+
+  </div>
+</form>
+      <div class="form-control" id="membro_control">
+        <form class="selectbox" action="{% url 'grupos' %}" method="post">{% csrf_token %}
+          <label for="membros"><h3>{{ btn_grupo }}</h3></label>
+          <select id="membros" name="ramal_adicionar">
+          {% for i in lista_ramais  %}
+            {% if i not in  lista_grupos_atual or lista_grupos_atual is None %}
+                <option  value={{ i }} >{{ i }}</option>
+            {% endif %}
+          {% endfor %}
+          </select>
+            <input type="hidden" name ="add_grupo" value={{ btn_grupo }}>
+            <button name="adicionar_ramal" value="True">Adicionar</button>
+         </form>
+            <div class="select_grupos">
+              <div class="scroll-box-grupo">
+                <br>
+                <form class="ramal_membro" action="{% url 'grupos' %}" method="post"> {% csrf_token %}
+                    {% for i in lista_grupos_atual  %}
+                    <ul class="btn-membro" id="btn-ramal">{{ i }}
+                        <input type="hidden" name="grupo_rm" value={{ btn_grupo }}>
+                        <button class="close-button" value="{{ i }}" name="del_ramal_grupo" id="del_ramal">x</button></ul>
+                    {% endfor %}
+                </form>
+
+              </div>
+            </div>
+      </div>
+
+
+  </body>
+
+</html>

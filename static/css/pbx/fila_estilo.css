@@ -1,0 +1,196 @@
+
+
+.ramal_fila {
+    width: 95px;
+    height: 28px;
+
+    border-radius: 10px;
+    margin-left: 5px;
+    background-color: #eeeeee;
+    position: relative;
+
+}
+.ramal_fila ul {
+    align-self: start;
+    font-family: Arial, sans-serif;
+    margin: auto;
+    margin-left: 12px;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.del_fila {
+  position: absolute;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  top: 5px;
+  right: 5px;
+  border-radius: 50%;
+  background-color: #eeeeee;
+  border: none;
+  color: #000;
+}
+.del_fila:hover {
+    position: absolute;
+    background-color: lightgray;
+    cursor: pointer;
+  }
+  
+
+
+.select_ramais_fila {
+
+  width: 230px; /* tamanho do retangulo*/
+  height: 200px; /* tamanho do retangulo*/
+  overflow: auto;
+  margin-left: 1px;
+  background-color: white;
+  margin-top: 20px;
+  border-radius: 20px;
+  overflow-x: hidden;
+
+}
+
+.scroll-box-fila {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 20%;
+  background-color: white;
+  margin-top: 10px;
+  padding-left: 10px;
+}
+
+.coluna {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.small-rectangle {
+  width: 100%;
+  height: 80px;
+  margin-bottom: 10px;
+  background-color: lightgray;
+}
+
+
+.container_fila {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+  }
+  
+  .form-control {
+    display: flex;
+    flex-direction: column;
+  
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-control input[type="text"], select {
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    width: 200px;
+  }
+  
+  .selectbox select {
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 16px;
+    width: 100px;
+  }
+
+ .selectbox button {
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+
+  
+  .menu_fila {
+
+    position: relative;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: right; /* esquerda o container na tela */
+  }
+
+
+  #menu_fila {
+    position: absolute;
+    left: 0px;
+    margin: 0px;
+    top: 18%;
+    height: 450px;
+    width: 100px;
+    list-style: none;
+    margin-left: 88%;
+    padding: 10px;
+    background-color: #1c869a;
+/* background-color: #1c869a; */
+    box-shadow: inset 0 0 10px #FFFFFF;
+
+  }
+
+  .fila_button {
+    position: relative;
+    border: none;
+    display: table-cell;
+    text-align: center;
+    border-radius: 15px  0  0 15px;
+    height: 20px;
+    width: 80px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    padding-left: 0%;
+
+  }
+
+
+.fila_button:hover {
+    background-color: #1c869a;
+    color: #eeeeee;
+}
+
+
+.fila_button_del {
+    border: none;
+    justify-content: flex-start;
+    text-align: start;
+    border-radius:  0 15px 15px  0;
+    font-weight: bold;
+    height: 20px;
+    width: 10px;
+    position: relative;
+    font-family: Arial Bold, sans-serif;
+    font-size: 12px;
+    padding-left: 1.5px;
+
+  }
+
+  .fila_button_del:hover {
+    background-color: #1c869a;
+    color: #eeeeee;
+
+  }
+  #ring {
+    height: 30px;
+    width: 50px;
+    font-family: Arial Bold, sans-serif;
+    padding: 0;
+    padding-left: 5px;
+    align-content: center;
+    }
+
+

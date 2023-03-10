@@ -1,0 +1,121 @@
+{% load static %}<!--carregar objetos estaticos dentro do diretório statico do projeto em Djaango-->
+
+<!DOCTYPE html>
+
+
+
+  <head>
+    <title>PBX</title>
+      <!-- Essa é a ref para passar o parametro da pasta correta no diretório estático  -->
+      <link rel="shortcut icon" type="image/x-icon" href="{% static 'icone/favicon.ico' %}"><!-- e -->
+      <link rel="stylesheet" href="{% static 'css/pbx/pbx_estilo.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'css/pbx/fila_estilo.css' %}">
+  </head>
+
+
+
+  {% include "geral/menu.html" %}
+    <!--ABAS "-->
+<link rel="stylesheet" href="{% static 'css/abas.css' %}"><!-- CSS do forms de cadastro -->
+<div> <br> </div>
+<div class="tabs">
+<!--action envia as funções do forms para a url com o nome igual ao que esta entre aspas "-->
+  <form action="{% url 'pbx'%}" method="POST">{% csrf_token %}
+    <button class="tab-btn" id="tab-1" name="ramais">RAMAIS</button>
+    <button class="tab-btn" id="btn-active" name="fila">FILA</button>
+    <button class="tab-btn" id="tab-3" name="grupos">GRUPOS</button>
+    <button class="tab-btn" id="tab-4" name="tempo">TEMPO</button>
+    <button class="tab-btn" id="tab-5" name="audio">ÁUDIO</button>
+
+  </form>
+</div>
+<div class="pageDIV"></div><!--linha superior "-->
+  <!--ABAS "-->
+
+  <body>
+    <div class="menu_fila"  id="menu_fila">
+        {% for i, n in FilasGeral %}
+    <!--action envia as funções do forms para a url com o nome igual ao que esta entre aspas "-->
+        <form action="{% url 'fila' %}" method="POST">{% csrf_token %}
+
+          <br><input type="submit" value="{{ i }} {{ n }}" class="fila_button"  name=filaAlias>
+              <input type="submit" value="x" class="fila_button_del"> </br>
+              <input type="hidden" value="{{ i }}" class="fila_button_del" name=rmFila> </br>
+        </form>
+    {% endfor %}
+    </div>
+<form action="{% url 'fila' %}" method="POST">{% csrf_token %}
+
+  <div class="container_fila">
+    <div class="form-control">
+
+        <input type="hidden" id="idFila" name ="idFila" value={{ idFila }}>
+      <label  for="name" >Nome:</label>
+        <input type="text" id="name" name ="nome_da_fila" value={{ nome_da_fila }}>
+    </div>
+      <div class="form-control">
+        <label for="strategy">Estratégia:</label>
+        <select id="strategy" name="estrategia">
+          {% for i in estrategias %}
+            {% if i ==  estrategia_atual  %}
+                <option value={{ i }} selected>{{ i }}</option>
+            {% else %}
+                <option value={{ i }} >{{ i }}</option>
+
+            {% endif %}
+          {% endfor %}
+
+        </select>
+      </div>
+      <div class="form-control2" id="tempo">
+        <label for="ring">Toques:</label><br>
+        <select id="ring" name="toque">
+          {% for i in toques %}
+            {% if i ==  toque_atual  %}
+                <option value={{ i }} selected>{{ i }}</option>
+            {% else %}
+                <option  value={{ i }} >{{ i }}</option>
+
+            {% endif %}
+          {% endfor %}
+        </select>
+            {% if anuncio_atual ==  "yes" %}
+                <input type="checkbox" name="anuncio"  checked>Anúncio</input>
+            {% else %}
+                <input type="checkbox" name="anuncio" >Anúncio</input>
+            {% endif %}
+
+            <br>
+      </div>
+    <button value="True" name="atualizar_fila">Atualizar</button>
+      </div>
+</form>
+      <div class="form-control">
+        <form class="selectbox" action="{% url 'fila' %}" method="post">{% csrf_token %}
+          <select name="ramal_adicionar">
+          {% for i in lista_ramais  %}
+            {% if i not in  lista_filas_atual or lista_filas_atual is None %}
+                <option  value={{ i }} >{{ i }}</option>
+            {% endif %}
+          {% endfor %}
+          </select>
+            <input type="hidden" name ="idFila" value={{ idFila }}>
+            <button name="adicionar_ramal" value={{ idFila }}>Adicionar</button>
+         </form>
+            <div class="select_ramais_fila">
+              <div class="scroll-box-fila">
+                <br>
+                  {% for i in lista_filas_atual  %}
+                <form class="ramal_fila" action="{% url 'fila' %}" method="post"> {% csrf_token %}
+                    <ul>{{ i }}</ul>
+                    <button class="del_fila" value="{{ i }} {{ idFila }}" name="del_ramal_fila">x</button>
+                </form>
+                  {% endfor %}
+              </div>
+            </div>
+      </div>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+          </div></td>
+        <td><div id="nome">
+            <input type="text" name="nome" value={{ linha.2 }}></div>
+        </td>
+        <td><div id="grupo">
+          <select>
+            <option  name="grupo" value={{ linha.3 }} >{{ linha.3 }}</option>
+            {% for grupo in lista_de_grupos %}
+                {% if grupo != linha.3  %}
+                    <option name="grupo" value={{ grupo }}>{{ grupo }}</option>
+                {% endif %}
+            {% endfor %}
+          </select></div>
+        </td>
+        <td><div id="tronco">
+          <select name="tronco">
+            <option  value={{ linha.4 }} >{{ linha.4 }}</option>
+            {% for tronco in lista_de_troncos %}
+                {% if tronco != linha.4  %}
+                    <option name="tronco" value={{ tronco }}>{{ tronco }}</option>
+                {% endif %}
+            {% endfor %}
+          </select></div>
+        </td>
+        <td><div id="grava">
+          <select name="grava">
+                {% if linha.5 == "yes" %}
+                    <option value="Sim">Sim</option>
+                    <option value="Não">Não</option>
+                {% else %}
+                    <option value="Não">Não</option>
+                    <option value="Sim">Sim</option>
+                {% endif %}
+          </select></div></td>
+        <td>
+            <div id="senha">
+              <input name="senha" type="password" value={{ linha.6 }}>
+            </div>
+        </td>
+        <td><div id="ipaddr"><input readonly type="text" value={{ linha.7 }}></div></td>
+
+          <td><div class="btn-ex-edit">
+              <input type="hidden" name=arualizar_ramal value={{ linha.0 }}>
+            <button type="submit">Atualizar</button>
+          </div>
+        </td>
+        <td><div class="btn-ex-edit">
+            <input type="hidden" name=ramal_excluir{{ linha.0 }} value={{ linha.0 }}>
+            <button type="submit">Excluir</button>
+          </div>
+
+</body>
+</html>

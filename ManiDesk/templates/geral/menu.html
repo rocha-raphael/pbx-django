@@ -1,0 +1,17 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/menu_estilo.css' %}">
+<link rel="shortcut icon" type="image/x-icon" href="{% static 'icone/favicon.ico' %}">
+
+    <div class="containerMenu"  id="menu">
+        <!--action envia as funções do forms para a url com o nome igual ao que esta entre aspas "-->
+        <form action="{% url 'home'%}" method="POST">{% csrf_token %}
+            <br><input type="submit" value="" class="round-button" id="home" name="homeBotao"> </br>
+            <br><input type="submit" value="" class="round-button" id="painel" name="homePainel"> </br>
+            <br><input type="submit" value="" class="round-button" id="pbx" name="homePbx"> </br>
+            <br><input type="submit" value="" class="round-button" id="estatisticas" name="homeEst"> </br>
+            <br><input type="submit" value="" class="round-button" id="adm" name="homeAdm"> </br>
+            <br><input type="submit" value="" class="round-button" id="global" name="homeGlobal"> </br>
+
+        </form>
+    </div>

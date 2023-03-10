@@ -1,0 +1,42 @@
+{% load static %}<!--carregar objetos estaticos dentro do diretório statico do projeto em Djaango-->
+
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+
+    <title>PBX</title>
+      <!-- Essa é a ref para passar o parametro da pasta correta no diretório estático  -->
+      <link rel="shortcut icon" type="image/x-icon" href="{% static 'icone/favicon.ico' %}"><!-- e -->
+    <link rel="stylesheet" href="{% static 'css/pbx/pbx_estilo.css' %}">
+  </head>
+  <body class="tela">
+
+  {% include "geral/menu.html" %}
+
+
+    <!--ABAS "-->
+<link rel="stylesheet" href="{% static 'css/abas.css' %}"><!-- CSS do forms de cadastro -->
+<div> <br></div>
+
+<div class="tabs">
+<!--action envia as funções do forms para a url com o nome igual ao que esta entre aspas "-->
+  <form action="{% url 'pbx'%}" method="POST">{% csrf_token %}
+    <button class="tab-btn" id="tab-1" name="ramais">RAMAIS</button>
+    <button class="tab-btn" id="tab-2" name="fila">FILA</button>
+    <button class="tab-btn" id="tab-3" name="grupos">GRUPOS</button>
+    <button class="tab-btn" id="tab-4" name="tempo">TEMPO</button>
+    <button class="tab-btn" id="tab-5" name="audio">ÁUDIO</button>
+
+  </form>
+</div>
+<div class="pageDIV"></div>
+  <!--ABAS "-->
+
+<div class="containerPBX">
+
+
+</div>
+    </body>
+</html>

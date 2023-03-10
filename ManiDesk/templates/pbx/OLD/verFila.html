@@ -1,0 +1,28 @@
+<!--
+<!--<table>
+<!--  <thead>
+<!--    <tr>
+<!--      <th>Nome</th>
+<!--      <th>Estrategia</th>
+<!--      <th>Anuncio</th>
+<!--      <th>Musica</th>
+<!--      <th>Toques por Atendente</th>
+<!--
+<!--    </tr>
+<!--  </thead>
+<!--  <tbody>
+<!--    {% for linha in lista_de_fila %}
+<!--      <tr>
+<!--        {% for celula in linha %}
+<!--                  <td>{{ celula }}</td>
+<!--           {% endfor %}
+<!--          <td>
+<!--          <form action="{% url 'fila' %}" method="post">{% csrf_token %}
+<!--            <input type="hidden" name="fila_excluir" value="{{ linha|slice:":1" }}">
+<!--            <button type="submit">Excluir</button>
+<!--          </form>
+<!--        </td>
+<!--      </tr>
+<!--    {% endfor %}
+<!--  </tbody>
+<!--</table>

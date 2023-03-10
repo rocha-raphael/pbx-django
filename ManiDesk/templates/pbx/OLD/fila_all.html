@@ -1,0 +1,69 @@
+<!--{% load static %}
+<!--
+<!--<!DOCTYPE html>
+<!--<html>
+<!--<head>
+<!--    <link rel="stylesheet" href="{% static 'css/pbx/fila_estilo.css' %}">
+<!--       <link rel="shortcut icon" type="image/x-icon" href="{% static 'icone/favicon.ico' %}"><!-- e -->
+<!--</head>
+<!--    <link rel="stylesheet" href="{% static 'css/pbx/pbx_estilo.css' %}">
+<!--  {% include "geral/menu.html" %}
+<!--
+<!--    <!--ABAS "-->
+<!--<link rel="stylesheet" href="{% static 'css/abas.css' %}"><!-- CSS do forms de cadastro -->
+<!--<div> <br></div>
+<!--<div class="tabs">
+<!--<!--action envia as funções do forms para a url com o nome igual ao que esta entre aspas "-->
+<!--  <form action="{% url 'pbx'%}" method="POST">{% csrf_token %}
+<!--    <button class="tab-btn" id="tab-1" name="ramais">RAMAIS</button>
+<!--    <button class="tab-btn" id="btn-active" name="fila">FILA</button>
+<!--    <button class="tab-btn" id="tab-3" name="grupos">GRUPOS</button>
+<!--    <button class="tab-btn" id="tab-4" name="tempo">TEMPO</button>
+<!--    <button class="tab-btn" id="tab-5" name="audio">ÁUDIO</button>
+<!--
+<!--  </form>
+<!--</div>
+<!--<div class="pageDIV"></div>
+<!--  <!--ABAS "-->
+<!--<body>
+<!--  <div class="container_fila">
+<!--    <div class="form-control">
+<!--      <label for="name">Nome:</label>
+<!--      <input type="text" id="name">
+<!--    </div>
+<!--
+<!--    <div class="form-control">
+<!--      <label for="strategy">Estratégia:</label>
+<!--      <select id="strategy">
+<!--        <option value="">Selecione uma opção</option>
+<!--        <option value="1">Opção 1</option>
+<!--        <option value="2">Opção 2</option>
+<!--        <option value="3">Opção 3</option>
+<!--      </select>
+<!--    </div>
+<!--
+<!--    <div class="form-control">
+<!--      <form class="selectbox" action="{% url 'fila' %}" method="´post">
+<!--        <select>
+<!--
+<!--          <option value="">Ramal</option>
+<!--          <option value="1">Opção 1</option>
+<!--          <option value="2">Opção 2</option>
+<!--          <option value="3">Opção 3</option>
+<!--        </select>
+<!--
+<!--        <button>Adicionar</button>
+<!--      </form>
+<!--                <div class="select_ramais_fila">
+<!--                    <div class="scroll-box">
+<!--                      <br>  </br>
+<!--                      <form class="ramal_fila" action="{% url 'fila' %}" method="´post"> <!--{% csrf_token %}-->
+<!--                       <ul>2000</ul>
+<!--                        <button class="del_fila">x</button>
+<!--                      </form>
+<!--                    </div>
+<!--                  </div>
+<!--
+<!--  </div>
+<!--
+<!--</body>

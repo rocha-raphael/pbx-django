@@ -1,0 +1,26 @@
+
+.tela {
+    height: 100vh;
+    width: 100%
+}
+
+.containerPBX{
+}
+
+.blink {
+    padding: 3px 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.5s ease;
+
+}
+.blink:hover {
+    background-color: #1c869a;
+    color: white;
+}
+
+.blink:active {
+    transform: translateY(2px);
+ }

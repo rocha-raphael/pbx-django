@@ -1,0 +1,59 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/pbx/criar_estilo.css' %}">
+<div class="criar">
+
+        {% if existente is not None %}
+            {% include "pbx/ramais/popup_existente.html" %}
+      {% else %}
+    {% endif %}
+    <form action="{% url 'ramais' %}" method="post">{% csrf_token %}
+
+<div class="first-row">
+  <div class="row-elements">
+      <label>Ramal:</label>
+      <input name="ramal" type="number" pattern="[0-9]*"  placeholder="Ramal" min=2000 max=2999 required>
+  </div>
+  <div class="row-elements">
+      <label>Nome:</label>
+      <input name="nome" type="text" placeholder="Nome" required>
+  </div>
+  <div class="row-elements">
+      <label>Senha:</label>
+      <input name="senha"  type="password" minlength="6" placeholder="Senha" required>
+
+</div>
+</div>
+<div class="second-row">
+  <div class="row-elements">
+            <label>Contexto:</label>
+      <select  name="contexto">
+          {% for contexto in contextos %}
+        <option value="{{ contexto }}">{{ contexto }}</option>
+          {% endfor %}
+
+      </select>
+  </div>
+
+  <div class="row-elements">
+      <label>Tronco:</label>
+      <select  name="tronco">
+          {% for tronco in lista_de_troncos %}
+        <option value="{{ tronco }}">{{ tronco }}</option>
+          {% endfor %}
+      </select>
+  </div>
+    </div>
+  <div class="row-elements">
+<div class="third-row">
+     <label>
+         <input name="grava" type="checkbox" id="grava"  value="sim">
+         Gravar</label>
+
+      <input type="submit" name="incluir" value="Incluir">
+    </div>
+
+</div>
+    </form>
+</div>
+
+

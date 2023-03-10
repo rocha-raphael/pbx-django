@@ -1,0 +1,57 @@
+{% load static %}<!--carregar objetos estaticos dentro do diretório statico do projeto em Djaango-->
+
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+
+    <title>PBX</title>
+      <link rel="stylesheet" href="{% static 'css/home_estilo.css' %}">
+      <!-- Essa é a ref para passar o parametro da pasta correta no diretório estático  -->
+      <!-- <link rel="stylesheet" href="{% static 'css/estilo.css' %}"> -->
+    <!--  <link rel="shortcut icon" type="image/x-icon" href="{% static 'icone/favicon.ico' %}">-->
+
+
+  </head>
+{% include "geral/menu.html" %}
+
+<body class="tela">
+  <div class="containerHOME">
+    <header>
+        <h1>Bem-vindo</h1>
+      </header>
+
+
+    <nav>
+        <ul>
+            <button  class="blink">Sobre</button>
+            <button  class="blink">Alterar senha</button>
+            <button  class="blink">Sair</button>
+        </ul>
+
+    </nav>
+    <main>
+<article>
+      <section >
+
+      </section>
+</article>
+    </main>
+<aside>
+            <h2>Contato</h2>
+        <li>Entre em contato conosco (11) 2323-0000</li>
+        <li>Email: telecom@suporte.com.br</li>
+        <li>whatsapp: (11) 92323-0000</li>
+
+</aside>
+
+      <footer>
+        <p></p>
+      </footer>
+
+
+</div>
+</body>
+
+</html>

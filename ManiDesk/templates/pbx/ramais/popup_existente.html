@@ -1,0 +1,27 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/pbx/popup_editar.css' %}">
+<!DOCTYPE html>
+<html>
+
+<!-- Conteúdo do pop-up -->
+<input type="checkbox" class="modal-state" id="modal-1" value="RAMAL">
+<div class="modal">
+  <label class="modal-background" for="modal-1"> RAMAL </label>
+<div class="modal-content">cd
+    <label for="modal-1" value="RAMAL"> </label>
+    <form action="{% url 'ramais' %}" method="post">{% csrf_token %}
+
+      <button type="submit" value="Entendido" name="entendido">X</button>
+
+    <h1>{{ ramal }} </h1>
+        <p>JÁ EXISTE</p>
+       <input name="entendido" type="submit" value="Entendido">
+
+</form>
+
+
+</div>
+</div>
+
+</html>

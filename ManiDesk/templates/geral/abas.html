@@ -1,0 +1,18 @@
+{% load static %}<!--carregar objetos estaticos dentro do diretório statico do projeto em Djaango-->
+
+    <!--ABAS "-->
+<link rel="stylesheet" href="{% static 'css/abas.css' %}"><!-- CSS do forms de cadastro -->
+<div> <br> </div>
+<div class="tabs">
+<!--action envia as funções do forms para a url com o nome igual ao que esta entre aspas "-->
+  <form action="{% url 'pbx'%}" method="POST">{% csrf_token %}
+    <button class="tab-btn" id="{{ aba_ramais }}" name="ramais">RAMAIS</button>
+    <button class="tab-btn" id="{{ aba_fila }}" name="fila">FILA</button>
+    <button class="tab-btn" id="{{ aba_grupos }}" name="grupos">GRUPOS</button>
+    <button class="tab-btn" id="{{ aba_tempo }}" name="tempo">TEMPO</button>
+    <button class="tab-btn" id="{{ aba_audio }}" name="audio">ÁUDIO</button>
+
+  </form>
+</div>
+<div class="pageDIV"></div><!--linha superior "-->
+  <!--ABAS "-->
